@@ -216,7 +216,7 @@ export default function LeadershipPartnershipsPage() {
                        100% { transform: translateX(-50%); }
                     }
                     .animate-pure-marquee {
-                       animation: pureMarquee 25s linear infinite;
+                       animation: pureMarquee 20s linear infinite;
                        display: flex;
                        width: max-content;
                     }
@@ -225,13 +225,23 @@ export default function LeadershipPartnershipsPage() {
                        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
                     }
                  `}} />
-                            <div className="animate-pure-marquee hover:[animation-play-state:paused] gap-12 py-4 items-center">
+                            <div className="animate-pure-marquee hover:[animation-play-state:paused] py-4 items-center">
                                 {/* Items repeated to create infinite illusion */}
-                                {[...Array(2)].map((_, i) => (
-                                    <div key={i} className="flex gap-12 items-center px-6">
-                                        {["Partner 1", "Partner 2", "Partner 3", "Partner 4", "Partner 5", "Partner 6"].map((placeholder, idx) => (
-                                            <div key={idx} className="w-32 h-16 bg-white border border-border/60 rounded-lg flex items-center justify-center shadow-sm grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-                                                <span className="text-muted-foreground font-semibold text-xs tracking-wider uppercase opacity-50">{placeholder}</span>
+                                {[...Array(6)].map((_, i) => (
+                                    <div key={i} className="flex gap-10 md:gap-16 items-center pr-10 md:pr-16 shrink-0">
+                                        {[
+                                            { name: "Prestige", src: "/images/PRESTIGE.png" },
+                                            { name: "Infygate", src: "/images/infygate.jpeg" },
+                                            { name: "Sengoal", src: "/images/sengoal.jpeg" }
+                                        ].map((partner, idx) => (
+                                            <div key={idx} className="w-36 h-20 md:w-44 md:h-24 bg-white border border-border/60 rounded-lg flex items-center justify-center p-3 shadow-sm transition-all duration-300 relative shrink-0 hover:shadow-md">
+                                                <Image
+                                                    src={partner.src}
+                                                    alt={partner.name}
+                                                    fill
+                                                    className="object-contain p-4"
+                                                    sizes="(max-width: 768px) 144px, 176px"
+                                                />
                                             </div>
                                         ))}
                                     </div>

@@ -173,7 +173,7 @@ export default function OurHistoryPage() {
                 </section>
 
                 {/* VIDEO SECTION (Media Block) */}
-                <section className="bg-energy-green-dark py-20 lg:py-28 relative overflow-hidden">
+                <section className="hidden bg-energy-green-dark py-20 lg:py-28 relative overflow-hidden">
                     <div className="absolute inset-0 bg-[url(/images/section-solar.jpg)] bg-cover bg-fixed bg-center opacity-10 mix-blend-overlay"></div>
                     <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10">
                         <ScrollReveal className="text-center mb-10">

@@ -206,18 +206,33 @@ export function SiteHeader() {
               onMouseEnter={() => hasSubmenu(item) && handleMouseEnter(item.label)}
               onMouseLeave={handleMouseLeave}
             >
-              <Link
-                href={item.href}
-                className="flex items-center gap-1 px-3 py-2 text-[13px] font-medium text-primary-foreground/80 transition-colors duration-200 hover:text-primary-foreground"
-              >
-                {item.label}
-                {hasSubmenu(item) && (
-                  <ChevronDown
-                    className={`h-3 w-3 transition-transform duration-200 ${activeMega === item.label ? "rotate-180" : ""
-                      }`}
-                  />
-                )}
-              </Link>
+              {item.href.startsWith("#") ? (
+                <a
+                  href={item.href}
+                  className="flex items-center gap-1 px-3 py-2 text-[13px] font-medium text-primary-foreground/80 transition-colors duration-200 hover:text-primary-foreground"
+                >
+                  {item.label}
+                  {hasSubmenu(item) && (
+                    <ChevronDown
+                      className={`h-3 w-3 transition-transform duration-200 ${activeMega === item.label ? "rotate-180" : ""
+                        }`}
+                    />
+                  )}
+                </a>
+              ) : (
+                <Link
+                  href={item.href}
+                  className="flex items-center gap-1 px-3 py-2 text-[13px] font-medium text-primary-foreground/80 transition-colors duration-200 hover:text-primary-foreground"
+                >
+                  {item.label}
+                  {hasSubmenu(item) && (
+                    <ChevronDown
+                      className={`h-3 w-3 transition-transform duration-200 ${activeMega === item.label ? "rotate-180" : ""
+                        }`}
+                    />
+                  )}
+                </Link>
+              )}
 
               {/* Dropdown (single column) */}
               {item.type === "dropdown" && (
@@ -326,13 +341,23 @@ export function SiteHeader() {
               {NAV_ITEMS.map((item) => (
                 <li key={item.label}>
                   {item.type === "link" ? (
-                    <Link
-                      href={item.href}
-                      className="block py-3 text-base font-medium text-primary-foreground/90 transition-colors hover:text-primary-foreground"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
+                    item.href.startsWith("#") ? (
+                      <a
+                        href={item.href}
+                        className="block py-3 text-base font-medium text-primary-foreground/90 transition-colors hover:text-primary-foreground"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="block py-3 text-base font-medium text-primary-foreground/90 transition-colors hover:text-primary-foreground"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )
                   ) : (
                     <div>
                       <button
