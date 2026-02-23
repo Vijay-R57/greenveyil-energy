@@ -14,7 +14,7 @@ const PAST_WEBINARS = [
         category: "Residential",
         desc: "Understand cost components, panel quality differences, inverter pricing, and ROI breakdown over 25 years.",
         speaker: "Head of Residential Engineering",
-        image: "/images/section-solar.jpg",
+        image: "/images/webinar-residential.png",
         link: "#",
     },
     {
@@ -22,7 +22,7 @@ const PAST_WEBINARS = [
         category: "Housing Society",
         desc: "Deep dive into common meter load analysis, society billing structures, and CAPEX vs PPA models.",
         speaker: "Senior Electrical Engineer",
-        image: "/images/section-wind.jpg",
+        image: "/images/webinar-housing.png",
         link: "#",
     },
     {
@@ -30,7 +30,7 @@ const PAST_WEBINARS = [
         category: "Commercial",
         desc: "Learn about demand charge optimization, load pattern matching, and OPEX solar agreements.",
         speaker: "Financial Modeling Analyst",
-        image: "/images/section-solar.jpg",
+        image: "/images/webinar-commercial.png",
         link: "#",
     },
     {
@@ -38,7 +38,7 @@ const PAST_WEBINARS = [
         category: "Industrial",
         desc: "Navigate state electricity board approvals, synchronization standards, and SCADA integration limits.",
         speaker: "Regulatory & Compliance Expert",
-        image: "/images/section-wind.jpg",
+        image: "/images/webinar-commercial.png",
         link: "#",
     },
     {
@@ -46,7 +46,7 @@ const PAST_WEBINARS = [
         category: "Residential",
         desc: "Breakdown of the true cost of solar financing vs direct capital expenditure.",
         speaker: "Solar Advisory Lead",
-        image: "/images/section-solar.jpg",
+        image: "/images/webinar-residential.png",
         link: "#",
     },
     {
@@ -54,7 +54,7 @@ const PAST_WEBINARS = [
         category: "Industrial",
         desc: "A technical overview of preventive maintenance and inverter lifetime extension.",
         speaker: "Head of Operations & Maintenance",
-        image: "/images/section-wind.jpg",
+        image: "/images/webinar-commercial.png",
         link: "#",
     }
 ]
@@ -82,7 +82,7 @@ export default function WebinarsPage() {
                 <section className="relative flex min-h-[60vh] flex-col items-center justify-center bg-energy-green-dark px-6 py-24 text-center lg:min-h-[65vh] lg:px-10 lg:py-32 pt-32 lg:pt-40 isolate">
                     <div className="absolute inset-0 z-0">
                         <div className="absolute inset-0 bg-energy-green-dark/90 mix-blend-multiply z-10"></div>
-                        <Image src="/images/section-solar.jpg" alt="Greenveyil Solar Academy Webinars" fill className="object-cover opacity-50 sepia-[.2]" />
+                        <Image src="/images/webinar-residential.png" alt="Greenveyil Solar Academy Webinars" fill className="object-cover opacity-50 sepia-[.2]" />
                         <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
                     </div>
                     <div className="relative z-10 mx-auto max-w-4xl pt-8">
@@ -165,7 +165,7 @@ export default function WebinarsPage() {
 
                             {/* Visual Thumbnail Column */}
                             <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full">
-                                <Image src="/images/section-solar.jpg" alt="Webinar Thumbnail" fill className="object-cover opacity-80 mix-blend-luminosity" />
+                                <Image src="/images/webinar-residential.png" alt="Webinar Thumbnail" fill className="object-cover opacity-80 mix-blend-luminosity" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-energy-green-dark via-transparent to-transparent"></div>
                                 <div className="absolute top-6 left-6 bg-energy-yellow text-energy-green-dark text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
                                     Residential
@@ -272,8 +272,8 @@ export default function WebinarsPage() {
                                     key={cat}
                                     onClick={() => setActiveCategory(cat)}
                                     className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all shadow-sm ${activeCategory === cat
-                                            ? "bg-energy-green-dark text-white shadow-md border border-energy-green-dark"
-                                            : "bg-background text-muted-foreground border border-border hover:bg-muted"
+                                        ? "bg-energy-green-dark text-white shadow-md border border-energy-green-dark"
+                                        : "bg-background text-muted-foreground border border-border hover:bg-muted"
                                         }`}
                                 >
                                     {cat}
