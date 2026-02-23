@@ -11,7 +11,7 @@ const SLIDES = [
     heading: "Powering India\nwith solar energy",
     description:
       "Leading the transition to clean energy independence through residential and commercial solar rooftop installations across India.",
-    cta: { label: "Explore Rooftop Solar", href: "#solar" },
+    cta: { label: "Explore Rooftop Solar", href: "/services" },
   },
   {
     image: "/images/hero-2.jpg",
@@ -19,7 +19,7 @@ const SLIDES = [
     heading: "End-to-end solar\nEPC solutions",
     description:
       "From design and engineering to procurement and installation, our turnkey solar EPC projects deliver reliable performance for decades.",
-    cta: { label: "Our EPC Services", href: "#services" },
+    cta: { label: "Our EPC Services", href: "/services/operations-maintenance" },
   },
   {
     image: "/images/hero-3.jpg",
@@ -27,7 +27,7 @@ const SLIDES = [
     heading: "Industrial-scale\nsolar plants",
     description:
       "Large-scale ground mounted solar plants and open-access projects powering factories, warehouses, and commercial establishments.",
-    cta: { label: "View Projects", href: "#projects" },
+    cta: { label: "View Projects", href: "/portfolio" },
   },
 ]
 
