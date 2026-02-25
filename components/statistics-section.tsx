@@ -76,7 +76,7 @@ function StatItem({
 const STATS = [
   { value: 10, suffix: " MW", label: "Installed Capacity" },
   { value: 8, suffix: "+", label: "States Across India" },
-  { value: 2200, suffix: "+", label: "Installations" },
+  { value: 500, suffix: "+", label: "Installations" },
   { value: 50, suffix: "%", label: "Bill Savings" },
 ]
 
